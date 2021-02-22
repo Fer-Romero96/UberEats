@@ -24,8 +24,7 @@ class MainActivity : AppCompatActivity() {
         init()
     }
 
-    fun init(){
-
+    private fun init(){
 
         editTextNumberSubtotal.addTextChangedListener(object: TextWatcher{
 
@@ -56,7 +55,7 @@ class MainActivity : AppCompatActivity() {
 
                     suma = small + service + delivery  + tip + subtotal
 
-                    buttonPlaceOrder.text = "Place Order - Delivery " + suma
+                    buttonPlaceOrder.text = "Place Order - Delivery $suma"
                 }
 
 
@@ -83,40 +82,50 @@ class MainActivity : AppCompatActivity() {
         tip = 0.0
         subtotal = 0.0
 
-
     }
 
     fun tip10(view : View) {
-         tip = editTextNumberSubtotal.text.toString().toDouble() * 0.1
-        suma = small + service + delivery  + tip + subtotal
-        buttonPlaceOrder.text = "Place Order - Delivery " + suma
-
+        if(editTextNumberSubtotal.length() != 0){
+            tip = editTextNumberSubtotal.text.toString().toDouble() * 0.1
+            button10.text = "10% $tip"
+            suma = small + service + delivery  + tip + subtotal
+            buttonPlaceOrder.text = "Place Order - Delivery $suma"
+        }
     }
 
     fun tip15(view : View){
-        tip = editTextNumberSubtotal.text.toString().toDouble() * 0.15
-        suma = small + service + delivery  + tip + subtotal
-        buttonPlaceOrder.text = "Place Order - Delivery " + suma
+        if(editTextNumberSubtotal.length() != 0){
+            tip = editTextNumberSubtotal.text.toString().toDouble() * 0.15
+            button15.text = "15% $tip"
+            suma = small + service + delivery  + tip + subtotal
+            buttonPlaceOrder.text = "Place Order - Delivery $suma"
+        }
     }
 
     fun tip20(view : View){
-        tip = editTextNumberSubtotal.text.toString().toDouble() * 0.2
-        suma = small + service + delivery  + tip + subtotal
-        buttonPlaceOrder.text = "Place Order - Delivery " + suma
-
+        if(editTextNumberSubtotal.length() != 0){
+            tip = editTextNumberSubtotal.text.toString().toDouble() * 0.2
+            button20.text = "20% $tip"
+            suma = small + service + delivery  + tip + subtotal
+            buttonPlaceOrder.text = "Place Order - Delivery $suma"
+        }
     }
 
     fun tip25(view : View){
-        tip = editTextNumberSubtotal.text.toString().toDouble() * 0.25
-        suma = small + service + delivery  + tip + subtotal
-        buttonPlaceOrder.text = "Place Order - Delivery " + suma
-
+        if(editTextNumberSubtotal.length() != 0){
+            tip = editTextNumberSubtotal.text.toString().toDouble() * 0.25
+            button25.text = "25% $tip"
+            suma = small + service + delivery  + tip + subtotal
+            buttonPlaceOrder.text = "Place Order - Delivery $suma"
+        }
     }
 
     fun tip0(view : View){
-        tip = editTextNumberSubtotal.text.toString().toDouble() * 0.0
-        suma = small + service + delivery  + tip + subtotal
-        buttonPlaceOrder.text = "Place Order - Delivery " + suma
-
+        if(editTextNumberSubtotal.length() != 0){
+            tip = editTextNumberSubtotal.text.toString().toDouble() * 0.0
+            button0.text = "$tip"
+            suma = small + service + delivery  + tip + subtotal
+            buttonPlaceOrder.text = "Place Order - Delivery $suma"
+        }
     }
 }
