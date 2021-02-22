@@ -25,6 +25,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun init(){
+
+
         editTextNumberSubtotal.addTextChangedListener(object: TextWatcher{
 
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
@@ -34,23 +36,29 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun afterTextChanged(s: Editable?) {
-                subtotal = s.toString().toDouble()
 
-                textViewSmall.text = (s.toString().toDouble() * 0.02).toString()
-                small = textViewSmall.text.toString().toDouble()
+                // You access the first character in afterTextChanged, if you delete all text the array is size 0.
+                if(editTextNumberSubtotal.length() != 0){
+                    subtotal = s.toString().toDouble()
+                    Log.i("edu.itesm.daec.UberEats", subtotal.toString())
 
-
-                textViewService.text = (s.toString().toDouble() * 0.05).toString()
-                service = textViewService.text.toString().toDouble()
-
-
-                textViewDelivery.text = (s.toString().toDouble() * 0.1).toString()
-                delivery = textViewDelivery.text.toString().toDouble()
+                    textViewSmall.text = (subtotal * 0.02).toString()
+                    small = textViewSmall.text.toString().toDouble()
 
 
-                suma = small + service + delivery  + tip + subtotal
+                    textViewService.text = (subtotal * 0.05).toString()
+                    service = textViewService.text.toString().toDouble()
 
-                buttonPlaceOrder.text = "Place Order - Delivery " + suma
+
+                    textViewDelivery.text = (subtotal * 0.1).toString()
+                    delivery = textViewDelivery.text.toString().toDouble()
+
+
+                    suma = small + service + delivery  + tip + subtotal
+
+                    buttonPlaceOrder.text = "Place Order - Delivery " + suma
+                }
+
 
             }
         })
@@ -64,10 +72,17 @@ class MainActivity : AppCompatActivity() {
         Log.i("edu.itesm.daec.UberEats", orderList.toString())
 
         buttonPlaceOrder.text = "Place Order - Delivery"
-        textViewSmall.text = "0"
-        textViewService.text = "0"
-        textViewDelivery.text = "0"
-        editTextNumberSubtotal.setText("0")
+        textViewSmall.text = "0.0"
+        textViewService.text = "0.0"
+        textViewDelivery.text = "0.0"
+        editTextNumberSubtotal.setText("")
+        suma = 0.0
+        small = 0.0
+        service = 0.0
+        delivery = 0.0
+        tip = 0.0
+        subtotal = 0.0
+
 
     }
 
