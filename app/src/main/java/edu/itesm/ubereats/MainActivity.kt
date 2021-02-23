@@ -39,23 +39,23 @@ class MainActivity : AppCompatActivity() {
                 // You access the first character in afterTextChanged, if you delete all text the array is size 0.
                 if(editTextNumberSubtotal.length() != 0){
                     subtotal = s.toString().toDouble()
-                    Log.i("edu.itesm.daec.UberEats", subtotal.toString())
 
-                    textViewSmall.text = (subtotal * 0.02).toString()
+                    textViewSmall.text = String.format("%.2f",(subtotal * 0.02).toString().toDouble())
                     small = textViewSmall.text.toString().toDouble()
 
-
-                    textViewService.text = (subtotal * 0.05).toString()
+                    textViewService.text = String.format("%.2f",(subtotal * 0.05).toString().toDouble())
                     service = textViewService.text.toString().toDouble()
 
 
-                    textViewDelivery.text = (subtotal * 0.1).toString()
+                    textViewDelivery.text = String.format("%.2f",(subtotal * 0.1).toString().toDouble())
                     delivery = textViewDelivery.text.toString().toDouble()
 
 
                     suma = small + service + delivery  + tip + subtotal
+                    suma = String.format("%.2f",suma).toDouble()
 
                     buttonPlaceOrder.text = "Place Order - Delivery $suma"
+
                 }
 
 
@@ -74,6 +74,10 @@ class MainActivity : AppCompatActivity() {
         textViewSmall.text = "0.0"
         textViewService.text = "0.0"
         textViewDelivery.text = "0.0"
+        button10.text = "10% "
+        button15.text = "15% "
+        button20.text = "20% "
+        button25.text = "25% "
         editTextNumberSubtotal.setText("")
         suma = 0.0
         small = 0.0
@@ -87,8 +91,10 @@ class MainActivity : AppCompatActivity() {
     fun tip10(view : View) {
         if(editTextNumberSubtotal.length() != 0){
             tip = editTextNumberSubtotal.text.toString().toDouble() * 0.1
+            tip = String.format("%.2f",tip).toDouble()
             button10.text = "10% $tip"
             suma = small + service + delivery  + tip + subtotal
+            suma = String.format("%.2f",suma).toDouble()
             buttonPlaceOrder.text = "Place Order - Delivery $suma"
         }
     }
@@ -96,8 +102,10 @@ class MainActivity : AppCompatActivity() {
     fun tip15(view : View){
         if(editTextNumberSubtotal.length() != 0){
             tip = editTextNumberSubtotal.text.toString().toDouble() * 0.15
+            tip = String.format("%.2f",tip).toDouble()
             button15.text = "15% $tip"
             suma = small + service + delivery  + tip + subtotal
+            suma = String.format("%.2f",suma).toDouble()
             buttonPlaceOrder.text = "Place Order - Delivery $suma"
         }
     }
@@ -105,8 +113,10 @@ class MainActivity : AppCompatActivity() {
     fun tip20(view : View){
         if(editTextNumberSubtotal.length() != 0){
             tip = editTextNumberSubtotal.text.toString().toDouble() * 0.2
+            tip = String.format("%.2f",tip).toDouble()
             button20.text = "20% $tip"
             suma = small + service + delivery  + tip + subtotal
+            suma = String.format("%.2f",suma).toDouble()
             buttonPlaceOrder.text = "Place Order - Delivery $suma"
         }
     }
@@ -114,8 +124,10 @@ class MainActivity : AppCompatActivity() {
     fun tip25(view : View){
         if(editTextNumberSubtotal.length() != 0){
             tip = editTextNumberSubtotal.text.toString().toDouble() * 0.25
+            tip = String.format("%.2f",tip).toDouble()
             button25.text = "25% $tip"
             suma = small + service + delivery  + tip + subtotal
+            suma = String.format("%.2f",suma).toDouble()
             buttonPlaceOrder.text = "Place Order - Delivery $suma"
         }
     }
@@ -123,8 +135,10 @@ class MainActivity : AppCompatActivity() {
     fun tip0(view : View){
         if(editTextNumberSubtotal.length() != 0){
             tip = editTextNumberSubtotal.text.toString().toDouble() * 0.0
+            tip = String.format("%.2f",tip).toDouble()
             button0.text = "$tip"
             suma = small + service + delivery  + tip + subtotal
+            suma = String.format("%.2f",suma).toDouble()
             buttonPlaceOrder.text = "Place Order - Delivery $suma"
         }
     }
