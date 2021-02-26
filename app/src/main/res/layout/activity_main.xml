@@ -130,9 +130,10 @@
         android:id="@+id/button0"
         android:layout_width="65dp"
         android:layout_height="80dp"
-        android:backgroundTint="@color/black"
+        android:backgroundTint="#DCDCDC"
         android:onClick="tip0"
         android:text="0%"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/editTextNumberSubtotal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -165,7 +166,9 @@
         app:layout_constraintBottom_toTopOf="@+id/imageViewSmallHelp"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintHorizontal_bias="0.988"
-        app:layout_constraintStart_toStartOf="@+id/guideline1" />
+        app:layout_constraintStart_toStartOf="@+id/guideline1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.956" />
 
     <TextView
         android:id="@+id/textViewSubtotal"
@@ -177,7 +180,9 @@
         app:layout_constraintBottom_toTopOf="@+id/textViewSmallOrder"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline1" />
+        app:layout_constraintStart_toStartOf="@+id/guideline1"
+        app:layout_constraintTop_toBottomOf="@+id/divider2"
+        app:layout_constraintVertical_bias="0.67" />
 
     <TextView
         android:id="@+id/textViewSmallOrder"
@@ -218,7 +223,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline1"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.901" />
+        app:layout_constraintVertical_bias="0.893" />
 
     <Button
         android:id="@+id/buttonPlaceOrder"
@@ -266,7 +271,7 @@
         app:layout_constraintHorizontal_bias="0.198"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.978"
+        app:layout_constraintVertical_bias="0.983"
         app:srcCompat="@drawable/ic_baseline_info_24"
         tools:srcCompat="@drawable/ic_baseline_info_24" />
 
@@ -277,10 +282,10 @@
         android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toTopOf="@+id/imageViewDeliveryHelp"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.037"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.984"
+        app:layout_constraintVertical_bias="0.982"
         app:srcCompat="@drawable/ic_baseline_info_24"
         tools:srcCompat="@drawable/ic_baseline_info_24" />
 
@@ -290,10 +295,10 @@
         android:layout_height="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.037"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.899"
+        app:layout_constraintVertical_bias="0.892"
         app:srcCompat="@drawable/ic_baseline_info_24"
         tools:srcCompat="@drawable/ic_baseline_info_24" />
 
