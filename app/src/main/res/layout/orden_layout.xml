@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/subtotal"
+                    android:textSize="20dp"
+                    android:text="210.10"
+                    android:textStyle="bold"
+                    android:textColor="#51AC05"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/small"
+                    android:textSize="20dp"
+                    android:text="2.1"
+                    android:textStyle="bold"
+                    android:textColor="#51AC05"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/service"
+                    android:textSize="20dp"
+                    android:text="23.2"
+                    android:textStyle="bold"
+                    android:textColor="#51AC05"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/delivery"
+                    android:textSize="20dp"
+                    android:text="21.5"
+                    android:textStyle="bold"
+                    android:textColor="#51AC05"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tip"
+                    android:textSize="20dp"
+                    android:text="30.3"
+                    android:textStyle="bold"
+                    android:textColor="#51AC05"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>
