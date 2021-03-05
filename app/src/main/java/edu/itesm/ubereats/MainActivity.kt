@@ -1,5 +1,6 @@
 package edu.itesm.ubereats
 
+import android.content.Intent
 import android.content.res.ColorStateList
 import android.graphics.Color
 import android.os.Bundle
@@ -82,6 +83,18 @@ class MainActivity : AppCompatActivity() {
         val order = Order(subtotal, small, service, delivery, tip)
         orderList.add(order)
         Log.i("edu.itesm.daec.UberEats", orderList.toString())
+
+        // Vamos a la actividad de Ordenes
+        val intento = Intent(this, OrdersActivity::class.java)
+        // Mando esos datos
+        intento.putExtra("subtotal",suma)
+        intento.putExtra("small",small)
+        intento.putExtra("service",service)
+        intento.putExtra("delivery",delivery)
+        intento.putExtra("tip",tip)
+        // Creo la actividad
+        startActivity(intento)
+
         resetAll()
     }
 

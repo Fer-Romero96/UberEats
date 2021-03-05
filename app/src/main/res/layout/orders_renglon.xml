@@ -20,45 +20,50 @@
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:id="@+id/subtotal"
+                    android:id="@+id/subtotalRenglon"
                     android:textSize="20dp"
                     android:text="210.10"
+                    android:textAlignment="center"
                     android:textStyle="bold"
-                    android:textColor="#51AC05"
+                    android:textColor="@color/black"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:id="@+id/small"
-                    android:textSize="20dp"
+                    android:id="@+id/smallRenglon"
+                    android:textSize="15dp"
                     android:text="2.1"
+                    android:textAlignment="center"
                     android:textStyle="bold"
                     android:textColor="#51AC05"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:id="@+id/service"
-                    android:textSize="20dp"
+                    android:id="@+id/serviceRenglon"
+                    android:textSize="15dp"
                     android:text="23.2"
+                    android:textAlignment="center"
                     android:textStyle="bold"
                     android:textColor="#51AC05"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:id="@+id/delivery"
-                    android:textSize="20dp"
+                    android:id="@+id/deliveryRenglon"
+                    android:textSize="15dp"
                     android:text="21.5"
+                    android:textAlignment="center"
                     android:textStyle="bold"
                     android:textColor="#51AC05"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
                 <TextView
-                    android:id="@+id/tip"
-                    android:textSize="20dp"
+                    android:id="@+id/tipRenglon"
+                    android:textSize="15dp"
                     android:text="30.3"
+                    android:textAlignment="center"
                     android:textStyle="bold"
                     android:textColor="#51AC05"
                     android:layout_width="match_parent"
